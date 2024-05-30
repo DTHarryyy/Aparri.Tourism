@@ -1,0 +1,107 @@
+#Projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:100px 20px 20px 20px;
+}
+.Proj-contents{
+    max-width: 68rem;
+}
+.Proj-contents h1{
+    font-size: var(--fs-l);
+    margin: 20px 0;
+    font-weight: 700;
+}
+.Proj-contents h3{
+    font-size: var(--fs-p);
+    margin: 20px 0;
+    font-weight: 700;
+}
+.Proj-contents p{
+    font-size: var(--fs-p);
+    margin: 10px 0;
+    text-align: justify;
+    text-indent: 40px;
+}
+.Proj-img-wrapper{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
+    gap: 10px;
+    margin: 50px 0;
+}
+.Proj-img-wrapper img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+.Proj-img-hide{
+    display: inline-block;
+}
+.Proj-item1{
+    grid-area: 1 / 1 / 3 / 3;
+}
+.Proj-item4{
+    grid-area: 3 / 1 / 5 / 2;
+}
+.Proj-item5{
+    grid-area: 2 / 3 / 4 / 4;
+}
+.svg-show,
+.show-label{
+    display: none;
+}
+#Projects button{
+    height: 50px;
+    width: 180px;
+    background-color: #191919;
+    color: #f0f0f0;
+    font-weight: 600;
+    border: none;
+    display: none;
+}
+@media (max-width: 920px) {
+    .Proj-img-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .Proj-item1,
+    .Proj-item4{
+        grid-area: auto;
+    }    
+    .Proj-item3{
+        grid-area: 2 / 1 / 4 / 2;
+    }
+    .Proj-item5{
+        grid-area: 1 / 2 / 3 / 3;
+    }
+    .Proj-item6{
+        grid-area: 4 / 2 / 6 / 3;
+    }
+}
+@media (max-width: 380px) {
+    .Proj-img-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+    .Proj-item1,
+    .Proj-item3,
+    .Proj-item4,
+    .Proj-item5,
+    .Proj-item6{
+        grid-area: auto;
+    }
+    .Proj-img-hide{
+        display: none;
+    }
+    #Projects .svg-show{
+        display: inline-block;
+    }
+    .show-label{
+        display: inline-block;
+    }
+}  

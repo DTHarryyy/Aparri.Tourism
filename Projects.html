@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css-files/style.css">
+    <link rel="stylesheet" href="css-files/general.css">
+    <link rel="stylesheet" href="css-files/navbar.css">
+    <link rel="stylesheet" href="css-files/project.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="photos/Aparri_Logo.png" alt="Aparri_Logo" id="Logo"></a>
+        <ul class="sidebar">
+            <li onclick="CloseSideBar()"><svg xmlns="http://www.w3.org/2000/svg" class="CloseNav" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li onclick="ShowSideBar()"><svg xmlns="http://www.w3.org/2000/svg" class="OpenNav" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg></li>
+        </ul>
+    </nav>
+    
+    <section id="Projects">
+        <main class="Proj-contents">
+            <h1>Cottages</h1>
+            <h3>
+                APARRI INTER NATIONAL INC. 
+                DONATES FUNDS TO BUILD BEACH COTTAGES
+                IN BARANGAY PUNTA!
+            </h3>
+            <p>
+                
+                Ang Aparri International Inc. sa pamumuno ni G. Tarrie Boy Co ay nagbigay ng pondo 
+                para sa mga beach cottages na planong ipatayo sa Barangay Punta, bandang DENR.
+                Kamakailan ginawa ang ground breaking nito na dinaluhan ng mga 
+                miyembro ng Aparri International Inc. kasama ang Alkade ng ating bayan 
+                Mayor Bryan Chan at mga pinuno ng iba’t-ibang departamento sa ating 
+                Ito ay isa sa mga pangarap ng bawat Aparriano na malapit ng 
+                maisakatuparan sa pamamagitan ng ating mga kababayang lumayo man, 
+                naiwan naman ang puso sa ating bayan! Maraming salamat po Aparri 
+                International Inc!
+            </p>   
+            <div class="Proj-img-wrapper">
+                <img src="photos/sheds.jpg" class="Proj-item1"  alt="">
+                <img class="Proj-img-hide Proj-item2"  src="photos/prototype-proj.jpg" alt="">
+                <img class="Proj-img-hide Proj-item3"  src="photos/Projects1.jpg" alt="">
+                <img class="Proj-img-hide Proj-item4"  src="photos/Projects5.jpg" alt="">
+                <img class="Proj-img-hide Proj-item5"  src="photos/Projects2.jpg" alt="">
+                <img class="Proj-img-hide Proj-item6"  src="photos/Projects.jpg" alt="">
+                <img class="Proj-img-hide Proj-item7"  src="photos/Projects.jpg" alt="">
+            </div>
+        </main>
+        <p class="show-label">ShowMore</p>
+        <svg xmlns="http://www.w3.org/2000/svg" class="svg-show" onclick="ProjectsHideOnMobile()" viewBox ="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 15.6315L20.9679 10.8838L20.0321 9.11619L12 13.3685L3.96788 9.11619L3.0321 10.8838L12 15.6315Z"></path></svg>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>

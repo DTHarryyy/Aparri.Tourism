@@ -1,0 +1,228 @@
+:root{
+    --fs-xl:  clamp(4rem, 1rem + 6vw , 6rem);
+    --fs-l: clamp(3rem, 1rem + 6vw,  4rem);
+    --fs-p: clamp(1rem, 2.5vw, 1.5rem);
+    
+    --light-blue: #b1b5ec;
+    --light-blue-shadow: 3px 3px 30px #5109c4;
+}
+#Landing-page{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -11;
+    overflow: hidden;
+}
+.video{
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -99;
+}
+.frame{
+    background-color: transparent;
+    border: 3px dashed #f0f0f0;
+    padding: 0 10px;
+    height: 80vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#Landing-page .frame main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#Landing-page main h1{
+    color: #f8f8f8;
+    font-size: var(--fs-xl);
+    font-family: "Madimi One", sans-serif;
+    font-weight: 100;
+    font-style: normal;        
+}
+#Landing-page main h1 span{
+    color: var(--light-blue);
+    font-family: "Madimi One", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-shadow: 0px 0px 10px #5109c4,
+                 0px 0px 20px #5109c4,
+                 0px 0px 30px #5109c4;
+}
+#line{
+    height: 3px;
+    width: 270px;
+    margin: 10px 0;
+    background-color: rgb(29, 18, 179);
+    border-radius: 5rem;
+}
+#Landing-page main p{
+    font-size: clamp(1rem, .8rem + 1vw , 1.50rem);
+    font-weight: 800;
+    line-height: 1.3;
+}
+@media (max-width: 800px) {
+    #Landing-page .frame main{
+        align-items: flex-start;
+    }
+    #Landing-page .frame main h1{
+        line-height: 1;
+    }
+    #line{
+        margin: 25px 0;
+    }
+}
+@media (max-width: 370px) {
+    #line{
+        width: 100%;
+    }
+}
+
+
+#Fiesta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 20px;
+}
+#Fiesta h1{
+    text-align: center;
+    font-size: var(--fs-l);
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+#Fiesta h4{
+    font-size: var(--fs-p);
+    text-align: center;
+    color: #d1c2c2;
+    margin-bottom: 30px;
+}
+#Fiesta main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1250px;
+}
+
+.fiesta-container p{
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: var(--fs-p);
+        
+}
+
+.iloveaparri{
+    max-width: 100%;
+    height: auto;
+}
+.iloveaparri img{
+    width: 100%;
+    height: auto;
+}
+#Fiesta main video{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.images-wrapper{
+    display: grid;
+    align-self: ce;
+    max-width: 816px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+@media (max-width:520px) {
+    .images-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+#Fiesta-imgs .images-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.images-wrapper .img-holder img{
+    height: 100%;
+    width: 100%;
+    border-radius: .2rem;
+    object-fit: cover;
+}
+
+#Images{
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+.img-holder{
+    max-width: 1250px;
+    border-radius: .5rem;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+}
+.img-holder img{
+    box-shadow: 5px 5px 10px #d1d1d1,
+                5px 5px 20px #d1d1d1,
+                5px 5px 40px #d1d1d1;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.item-1{
+    grid-area: 1 / 1 / 3 / 3;
+}
+.item-5{
+    grid-area: 3 / 2 / 5 / -1;
+}
+@media (max-width: 920px) {
+    .img-holder{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .item-1{
+        grid-area: 1 / 1 / 3 / 2;
+    }
+    .item-5{
+        grid-area: 3 / 2 / 5 / -1;
+    }
+}
+@media (max-width: 350px) {
+    .img-holder{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .item-1{
+        grid-area: auto;
+    }
+    .item-5{
+        grid-area: auto;
+    }
+}

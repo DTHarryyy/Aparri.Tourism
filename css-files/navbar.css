@@ -1,0 +1,80 @@
+:root{
+    --fs-xl:  clamp(4rem, 1rem + 6vw , 6rem);
+    --fs-l: clamp(3rem, 1rem + 6vw,  4rem);
+    --fs-p: clamp(1rem, 2.5vw, 1.5rem);
+    
+    --light-blue: #b1b5ec;
+    --light-blue-shadow: 3px 3px 30px #5109c4;
+}
+#Logo{
+    height: 60px;
+    border-radius: 50%;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* backdrop-filter: blur(10px); */
+    z-index: 999;
+}
+nav ul{
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    margin: 0 10px;
+    list-style: none;
+    display: inline;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--light-blue);
+    text-shadow: var(--light-blue-shadow);
+    font-weight: 700;
+    text-shadow: 0px 0px 10px #5109c4,
+                 0px 0px 20px #5109c4,
+                 0px 0px 30px #5109c4;
+}
+.sidebar{
+    width: 250px;
+    background-color: #f0f0f0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 40px;
+    z-index: 999999999;
+}
+.OpenNav{
+    height: 25px;
+    display: none;
+    color: #f0f0f0;
+    background-color: #191919;
+    padding: 8px;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+.CloseNav{
+    height: 30px;
+}
+.sidebar li{
+    margin: 10px 0;
+}
+@media (max-width: 720px) {
+    .OpenNav{
+        display: block;
+    }
+    .HideOnMobile{
+        display: none;
+
+    }
+}

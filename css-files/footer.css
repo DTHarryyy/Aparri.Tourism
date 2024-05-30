@@ -1,0 +1,59 @@
+footer{
+    width: 100%;
+    background-color: #191919;
+    color: #f0f0f0;
+    padding: 50px;
+}
+.footer-container{
+
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.footer-container h4{
+    font-size: 1.8rem;
+    margin: 20px 0;
+}
+.fb-logo{
+    height: 30px;
+    margin: 5px 10px;
+}
+.lgu-links-item{
+    display: flex;
+    align-items: center;
+}
+.footer-col-about p{
+    text-align: justify;
+    width: 400px;
+}
+.credits-footer p{  
+    margin: 20px 0;
+}
+@media (max-width: 858px) {
+    .footer-container{
+        flex-direction: column;
+    }
+    .footer-col{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer-col-about{
+        order: -1;
+    }
+    .footer-container h4{
+        margin: 10px;
+    }
+    .credits-footer p{
+        margin: 10px 0;
+    }
+}
+@media (max-width: 390px){
+    .footer-col-about p{
+        width: 100%;
+    }
+    footer{
+        padding: 30px 20px;
+    }
+}
